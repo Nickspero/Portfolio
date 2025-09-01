@@ -720,6 +720,19 @@ footer {
         left: 0px;
         padding: 48px;
     }
+    .shape {
+        display: none;
+    }
+    .click-me {
+        display: none;
+    }
+    .mail__btn, .mail__btn--bottom {
+        width: 48px;
+        height: 48px;
+    }
+    .fa-envelope {
+        font-size: 28px;
+    }
 }
 
 @media (max-width: 480px) {
