@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      src="https://kit.fontawesome.com/90a9fa0a2f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">(function(){emailjs.init({publicKey: "TWMzH2IFMbdgYjekQ",});})();</script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+
+    <section id="landing-page" onmousemove="moveBackground(event)">
+      <nav>
+        <figure>
+          <img
+            id="personal-logo"
+            src="./assets/logo border.png"
+            alt=""
+          />
+        </figure>
+        <ul class="nav__link--list">
+          <li class="nav__link">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect" onclick="toggleModal()"
+              >About</a
+            >
+          </li>
+          <li class="nav__link">
+            <a
+              href="#projects"
+              class="nav__link--anchor link__hover-effect"
+              >Projects</a
+            >
+          </li>
+          <li class="nav__link" onclick="toggleModal()">
+            <a
+              href="#"
+              class="nav__link--anchor link__hover-effect"
+              >Contact</a
+            >
+          </li>
+          <li class="nav__link click" onclick="toggleContrast()">
+            <a
+              href="#"
+              class="nav__link--anchor"
+              ><i class="fa-solid fa-circle-half-stroke"></i
+            >
+          </a>
+          </li>
+        </ul>
+        <p class="click-me">(Click Me!)</p>
+      </nav>
+
+      <header class="header">
+        <div class="header-content">
+          <h1 class="title">Hey</h1>
+          <h1 class="title orange">I'm Nick.</h1>
+          <p class="header__para">
+            I'm a <span class="orange">Frontend Web Developer </span>skilled in
+            crafting responsive, user-friendly interfaces with clean, efficient
+            code.<br />Here's a bit more <span class="orange click" onclick="toggleModal()">about me.</span>
+          </p>
+          <div class="header__icons">
+            <a
+              href="https://www.linkedin.com/in/nickspappas369" target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Nickspero" target="_blank" class="social__link click">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a
+              href="./assets/Resume.pdf"
+              target="_blank"
+              class="social__link click"
+            >
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
+          </div>
+        </div>
+      </header>
+      <button class="mail__btn click" onclick="toggleModal()"> 
+        <i class="fa-solid fa-envelope"></i>
+      </button>
+      <a href="#projects" class="scroll">
+        <div class="scroll__icon click"></div>
+      </a>
+
+      <!-- MODAL **************************-->
+<div class="modal">
+    <div class="modal__half modal__about">
+        <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+        <h4 class="modal__sub-title modal__sub-title--about">Frontend Web Developer</h4>
+        <p class="modal__para">I'm a 27 year old <span class="bright">Frontend Web Developer </span>passionate about turning designs into seamless web experiences that perform across all devices.</p>
+        <div class="modal__languages">
+            <figure class="modal__language">
+                <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
+                <span class="language__name">HTML</span>
+            </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/css-131-722685.png" alt="">
+             <span class="language__name">CSS</span>
+            </figure>
+            <figure class="modal__language">
+                <img class="modal__language--img" src="https://cdn.iconscout.com/icon/free/png-256/javascript-1-225993.png" alt="">
+                 <span class="language__name">JavaScript</span>
+            </figure>
+        </div>
+    </div>
+    <div class="modal__half modal__contact">
+        <h3 class="modal__title modal__title--contact">Let's Talk!</h3>
+        <h4 class="modal__sub-title modal__sub-title--contact">I'm currently available to work!</h4>
+        <form id="contact__form" onsubmit ='contact(event)' action="">
+            <div class="form__item">
+                <label class="form__item--label" >Name</label>
+                <input class="input" name="name" type="text" required></input>
+            </div>
+            <div class="form__item">
+                <label class="form__item--label" >Email</label>
+                <input class="input" name="user_email" type="email" required></input>
+            </div>
+            <div class="form__item">
+                <label class="form__item--label" >Message</label>
+                <textarea class="input" name="message" required></textarea>
+            </div>
+            <button id="contact__submit" class="form__submit">Send!</button>
+        </form>
+        <div class="modal__overlay modal__overlay--loading">
+            <i class="fa-solid fa-spinner"></i>
+        </div>
+        <div class="modal__overlay modal__overlay--success">Message Sent! Thank you!</div>
+        <i class="fa-solid fa-xmark click" onclick="toggleModal()"></i>
+        
+    </div>
+</div>
+
+    <!-- SHAPES -->
+
+    <img src="./assets/newsvg3_stripe_recolor.svg" class="shape shape-0">
+    <img src="./assets/newsvg (5).svg" class="shape shape-1">
+    <img src="./assets/newsvg (3).svg" class="shape shape-2">
+    <img src="./assets/newsvg4_zigzag_line.svg" class="shape shape-3">
+    <img src="./assets/newsvg (2).svg" class="shape shape-4">
+    <img src="./assets/newsvg (6).svg" class="shape shape-5">
+    <img src="./assets/newsvg (7).svg" class="shape shape-6">
+    <img src="./assets/newsvg (8).svg" class="shape shape-7">
+    <img src="./assets/newsvg (9).svg" class="shape shape-8">
+
+
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="row">
+          <h1 class="section__title">
+            Here are some of my <span class="orange">Projects.</span>
+          </h1>
+          <ul class="project__list">
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/treact.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Treact</h3>
+                  <h4 class="project__description--subtitle">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    Treact offers beautiful, modular React templates that are
+                    easy to set up, customize, and deploy — complete with
+                    features like pricing plans (Personal, Business,
+                    Enterprise), trustworthy service highlights, and a simple
+                    "register-download-run" workflow.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://nickspero.github.io/Treact-Project/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Nickspero/Treact-Project"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="project">
+              <div class="project__wrapper">
+                <img src="./assets/library.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Library</h3>
+                  <h4 class="project__description--subtitle">
+                    HTML, CSS, JavaScript
+                  </h4>
+                  <p class="project__description--para">
+                    A mock-ecommerce-style “Library” site offering an online
+                    platform to buy books. Featuring over 10,000 titles in
+                    various categories, with featured bestsellers and latest
+                    releases.
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://nickspero.github.io/E-Com-Practice/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Nickspero/E-Com-Practice"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stripes">
+        <div class="stripe blue"></div>
+        <div class = "stripe red"></div>
+      </div>
+
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="footer__content">
+            <figure>
+              <img
+                id="personal-logo"
+                src="./assets/logo border.png"
+                alt=""
+              />
+            </figure>
+            <div class="footer__links">
+              <a class="footer__link link__hover-effect" href="https://github.com/Nickspero" target="_blank">Github</a>
+              <a class="footer__link link__hover-effect" href="https://www.linkedin.com/in/nickspappas369" target="_blank">LinkedIn</a>
+              <a class="footer__link link__hover-effect"  href="#" onclick="toggleModal()">Contact</a>
+              <a class="footer__link link__hover-effect" href="./assets/Resume.pdf" target="_blank">Resume</a>
+            </div>
+            <p class="copyright">Copyright &copy; 2025 Nicholas Pappas</p>
+            <a href="#" onclick="toggleModal()">
+              <button class="mail__btn click">
+              <i class="fa-solid fa-envelope"></i>
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
