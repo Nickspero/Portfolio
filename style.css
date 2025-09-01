@@ -177,6 +177,10 @@ nav,
     background-color: #3BBAD8 ;
     color: #1c1c1c;
 }
+.dark-theme .mail__btn--bottom {
+    background-color: #3BBAD8 ;
+    color: #1c1c1c;
+}
 .dark-theme .social__link{
     background-color: #3BBAD8 ;
     color: #1c1c1c;
@@ -264,6 +268,18 @@ li {
 }
 
 .mail__btn {
+    width: 70px;
+    height: 70px;
+    font-size: 32px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: #C64623;
+    color: white;
+    position: absolute;
+    bottom: 32px;
+    right: 40px;
+}
+.mail__btn--bottom {
     width: 70px;
     height: 70px;
     font-size: 32px;
@@ -706,13 +722,13 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
 
     .header__para {
         font-size: 16px;
     }
     .title {
-        font-size: 96px;
+        font-size: 72px;
     }
     .social__link {
         width: 32px;
@@ -732,22 +748,26 @@ footer {
         margin: 0px 12px;
     }
     .mail__btn {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
     }
     .fa-envelope {
-        font-size: 30px;
+        font-size: 24px;
+        padding-bottom: 12px;
     }
     .modal__half{
         width: 100%;
     }
     .modal {
-        flex-direction: column;
+        flex-direction: column-reverse;
         width: 100%;
-        height: 100%;
+        height: auto;
+        transform: none;
+        top: 0;
+        left: 0;
     }
     #contact__submit {
-        margin: 0px 100px;
+        margin: 0px 30px;
     }
     .project__description {
         left: 10px;
@@ -756,10 +776,29 @@ footer {
         font-size: 20px;
     }
     .project__description--para{
-        font-size: 12px;
+        display: none;
     }
     .project__description--subtitle{
         font-size: 16px;
+    }
+    .dark-theme .shape {
+        display: none;
+    }
+    .click-me {
+        display: none;
+    }
+    #personal-logo {
+        width: 72px;
+        height: 72px;
+    }
+    .nav__link--anchor {
+        font-size: 14px;
+    }
+    .nav__link:first-child{
+        display: none;
+    }
+    .mail__btn--bottom {
+        display: none;
     }
                              
 }
@@ -767,17 +806,5 @@ footer {
 
 
 
-/* project__description--title{
-    font-size: 20px;
-}
-.project__description--link{
-    font-size: 16px;
-}
-.project__description--subtitle{
-    margin: 8px 0px;
-}
-.project__description--para {
-    margin: 0px;
-    font-size: 12px;
-} */
+
 
