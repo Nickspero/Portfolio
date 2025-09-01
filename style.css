@@ -723,6 +723,7 @@ footer {
     .shape {
         display: none;
     }
+
     .click-me {
         display: none;
     }
@@ -733,6 +734,19 @@ footer {
     .fa-envelope {
         font-size: 28px;
     }
+    .project__wrapper:active .project__description {
+    opacity: 1;                  /* Makes the description fully visible */
+    transform: translateY(-50%); /* Moves it upward into view */
+}
+
+.project__wrapper:active .project__img {
+    filter: blur(5px);           /* Blurs the image slightly */
+    transform: scale(1.07);      /* Zooms the image in a bit */
+}
+
+.project__wrapper:active .project__wrapper--bg {
+    opacity: 0.7;                /* Makes the dark overlay visible */
+}
 }
 
 @media (max-width: 480px) {
@@ -813,6 +827,19 @@ footer {
     .mail__btn--bottom {
         display: none;
     }
+    .project__wrapper:active .project__description {
+    opacity: 1;                  /* Makes the description fully visible */
+    transform: translateY(-50%); /* Moves it upward into view */
+}
+
+.project__wrapper:active .project__img {
+    filter: blur(5px);           /* Blurs the image slightly */
+    transform: scale(1.07);      /* Zooms the image in a bit */
+}
+
+.project__wrapper:active .project__wrapper--bg {
+    opacity: 0.7;                /* Makes the dark overlay visible */
+}
                              
 }
     
