@@ -734,17 +734,17 @@ footer {
     .fa-envelope {
         font-size: 28px;
     }
-    .project__wrapper:active .project__description {
+    .project__wrapper:focus .project__description {
     opacity: 1;                  /* Makes the description fully visible */
     transform: translateY(-50%); /* Moves it upward into view */
 }
 
-.project__wrapper:active .project__img {
+.project__wrapper:focus .project__img {
     filter: blur(5px);           /* Blurs the image slightly */
     transform: scale(1.07);      /* Zooms the image in a bit */
 }
 
-.project__wrapper:active .project__wrapper--bg {
+.project__wrapper:focus .project__wrapper--bg {
     opacity: 0.7;                /* Makes the dark overlay visible */
 }
 }
@@ -827,17 +827,17 @@ footer {
     .mail__btn--bottom {
         display: none;
     }
-    .project__wrapper:active .project__description {
+    .project__wrapper:focus .project__description {
     opacity: 1;                  /* Makes the description fully visible */
     transform: translateY(-50%); /* Moves it upward into view */
 }
 
-.project__wrapper:active .project__img {
+.project__wrapper:focus .project__img {
     filter: blur(5px);           /* Blurs the image slightly */
     transform: scale(1.07);      /* Zooms the image in a bit */
 }
 
-.project__wrapper:active .project__wrapper--bg {
+.project__wrapper:focus .project__wrapper--bg {
     opacity: 0.7;                /* Makes the dark overlay visible */
 }
                              
