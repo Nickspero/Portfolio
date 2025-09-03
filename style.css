@@ -892,8 +892,11 @@ footer {
     top: 0;
     left: 0;
   }
+  .modal__about{
+    display: none;
+  }
   #contact__submit {
-    margin: 0px 30px;
+    margin: 0px;
   }
   .project__description {
     left: 10px;
