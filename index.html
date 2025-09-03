@@ -12,7 +12,7 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">(function(){emailjs.init({publicKey: "TWMzH2IFMbdgYjekQ",});})();</script>
-    <script src="./index.js"></script>
+    <script src="./index.js" defer></script>
   </head>
   <body>
 
@@ -28,8 +28,8 @@
         <ul class="nav__link--list">
           <li class="nav__link">
             <a
-              href="#"
-              class="nav__link--anchor link__hover-effect" onclick="toggleModal()"
+              href="#about__me"
+              class="nav__link--anchor link__hover-effect"
               >About</a
             >
           </li>
@@ -66,7 +66,7 @@
           <p class="header__para">
             I'm a <span class="orange">Frontend Web Developer </span>skilled in
             crafting responsive, user-friendly interfaces with clean, efficient
-            code.<br />Here's a bit more <span class="orange click" onclick="toggleModal()">about me.</span>
+            code.<br />Here's a bit more <a href="#about__me"><span class="orange click">about me.</span></a>
           </p>
           <div class="header__icons">
             <a
@@ -103,7 +103,7 @@
         <p class="modal__para">I'm a 27 year old <span class="bright">Frontend Web Developer </span>passionate about turning designs into seamless web experiences that perform across all devices.
         <br>
         <br>
-        I enjoy writing <span class="bright">clean, efficient code</span> and staying up to date with the latest web technologies. My goal is to create digital products that not only look great but also feel intuitive and engaging for users.</p>
+        Here's my <span class="bright">Tech Stack:</span></p>
         <div class="modal__languages">
             <figure class="modal__language">
                 <img class="modal__language--img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/HTML5_Badge.svg/240px-HTML5_Badge.svg.png" alt="">
@@ -160,6 +160,31 @@
 
 
     </section>
+
+    <!-- ABOUT ME -->
+
+    <section id="about__me">
+        <div class="container about">
+            <h1 class="about__me--title">About <span class="orange">Me.</span></h1>
+    <div class="tv__wrapper">
+      <div class="tv__content">
+        <canvas id="canvas"></canvas>
+        <img class="tv" src="./assets/tv2.png" alt=""></img>
+        <img class="headshot" src="./assets/MOSHED-2025-9-2-19-6-44.gif" alt="">    
+        </div>
+        <div class="about__text"><p class="about__me--text">I'm a 27 year old <span class="bright">Frontend Web Developer </span>passionate about turning designs into seamless web experiences that perform across all devices.
+            <br>
+            <br>
+            My approach combines clean, efficient code with a strong focus on UI/UX, ensuring every interaction is <span class="bright">engaging, attention-grabbing, and frictionless.</span> 
+            <br>
+            <br>
+            By staying current with the latest web technologies, I aim to create digital products that not only look polished but also deliver a smooth, enjoyable experience for every user.</p></div>
+          </div>
+      </div>
+    </section>
+
+
+
 
     <section id="projects">
       <div class="container">

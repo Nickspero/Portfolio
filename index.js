@@ -69,3 +69,67 @@ function moveBackground(event) {
         shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px)`
     }
 }
+
+
+
+
+
+//Canvas
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resizeCanvas);
+resizeCanvas();
+
+let mouseX = 0, mouseY = 0;
+window.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX / window.innerWidth;
+  mouseY = e.clientY / window.innerHeight;
+});
+
+// Draw a glowing wave
+function drawRibbon(colors, offset) {
+  const time = Date.now() * 0.002;
+  const frequency = .5 + mouseX *2;
+  const amplitude = 150 + mouseY * 100;
+
+  ctx.beginPath();
+
+  for (let x = 0; x <= canvas.width; x++) {
+    const y = canvas.height / 2 +
+      Math.sin(x * 0.01 * frequency + time + offset) * amplitude;
+    ctx.lineTo(x, y);
+  }
+
+  // Use gradient stroke instead of fill
+  const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+  for (let i = 0; i < colors.length; i++) {
+    gradient.addColorStop(i / (colors.length - 1), colors[i]);
+  }
+
+  ctx.strokeStyle = gradient;
+  ctx.lineWidth = 8; // thicker line
+  ctx.shadowColor = colors[Math.floor(colors.length / 2)];
+  ctx.shadowBlur = 50; // glow intensity
+  ctx.stroke();
+}
+
+function animate() {
+  // fade background slightly instead of full clear (gives glowing trails)
+  ctx.fillStyle = '#1C1C1C';
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+  // Draw multiple glowing waves
+  drawRibbon(["#00ffff", "#ff00ff", "#00ff00"], 0);
+  drawRibbon(["#ff0080", "#ff8000", "#ffff00"], Math.PI / 3);
+  drawRibbon(["#377E80", "#C64623"], Math.PI / 1.5);
+
+  requestAnimationFrame(animate);
+}
+
+animate();
