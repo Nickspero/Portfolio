@@ -345,7 +345,7 @@ li {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 90%;
-  max-width: 1100px;
+  max-width: 900px;
   height: 700px;
   border-radius: 20px;
   overflow: hidden;
@@ -363,8 +363,8 @@ li {
 }
 
 .modal__half {
-  width: 50%;
-  padding: 40px 72px;
+  width: 100%;
+  padding: 40px 96px;
 }
 
 .modal__about {
@@ -380,7 +380,7 @@ li {
 }
 
 .modal__language {
-  width: calc(100% / 3);
+  width: 120px;
   padding: 16px;
   position: relative;
   display: flex;
@@ -560,10 +560,8 @@ label {
 
 .tv__wrapper {
   width: 100%;
-  margin: 24px;
   display: flex;
   justify-content: center;
-  padding: 24px;
 }
 
 .tv__content {
@@ -574,7 +572,7 @@ label {
 
 .about__text {
   margin: 48px;
-  padding: 48px;
+  width: 100%;
 }
 
 .tv {
@@ -778,19 +776,17 @@ footer {
         margin: 0px;
     }
     .about__me--text {
-        font-size: 16px;
+        font-size: 18px;
         padding: 0px;
     }
     .about__text {
-        margin: 0;
-        padding: 0px 24px 24px 24px;
-        text-align: center;
+        padding: 12px 150px;
     }
 }
 
 @media (max-width: 768px) {
   .header__para {
-    font-size: 16px;
+    font-size: 18px;
   }
   .title {
     font-size: 112px;
@@ -844,6 +840,10 @@ footer {
   .project__wrapper:focus .project__wrapper--bg {
     opacity: 0.7; /* Makes the dark overlay visible */
   }
+
+  .about__text {
+        padding: 12px 48px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -941,6 +941,10 @@ footer {
 
   .project__wrapper:focus .project__wrapper--bg {
     opacity: 0.7; /* Makes the dark overlay visible */
+  }
+
+  .about__me--text{
+    font-size: 16px;
   }
 }
 
