@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Nick Pappas Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script
       src="https://kit.fontawesome.com/90a9fa0a2f.js"
       crossorigin="anonymous"
@@ -61,8 +62,8 @@
 
       <header class="header">
         
-        <div class="header-content-outer">
-        <div class="header-content">
+        <div data-aos="zoom-in" data-aos-duration="1000" class="header-content-outer">
+        <div  class="header-content">
           <h1 class="title">Hey</h1>
           <h1 class="title orange">I'm Nick.</h1>
           <p class="header__para">
@@ -148,7 +149,7 @@
         <div class="container about">
           <div class="row">
             <h1 class="about__me--title">About <span class="orange">Me.</span></h1>
-    <div class="tv__wrapper">
+    <div data-aos="zoom-in" data-aos-duration="1000" class="tv__wrapper">
       <div class="tv__content">
         <canvas id="canvas"></canvas>
         <img class="tv" src="./assets/tv2.png" alt=""></img>
@@ -199,7 +200,76 @@
             Here are some of my <span class="orange">Projects.</span>
           </h1>
           <ul class="project__list">
-            <li class="project">
+            <li data-aos="fade-right" class="project">
+              <div class="project__wrapper">
+                <img src="./assets/UltraverseNFT.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Ultraverse NFT</h3>
+                  <h4 class="project__description--subtitle">
+                    React, CSS
+                  </h4>
+                  <p class="project__description--para">
+                    Ultraverse NFT Market is a platform created to showcase and sell NFTs from various artists. Users can explore diverse NFT collections, view creator profiles, and check out top sellers. The project served to master API data fetching, building an intuitive user interface, and effectively presenting dynamic content.  
+                  </p>
+                  <div class="project__description--links">
+                    <a 
+                      href="https://nick-pappas-internship.vercel.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Nickspero/NickPappas-Internship"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-aos="fade-left" class="project">
+              <div class="project__wrapper">
+                <img src="./assets/NetflixClone.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">Netflix</h3>
+                  <h4 class="project__description--subtitle">
+                    React, CSS
+                  </h4>
+                  <p class="project__description--para">
+                    This Netflix clone is a fully functional web application built with React, featuring a secure login system. It integrates with a live movie API to display up-to-date movies, complete with posters and trailers. Users can click on any movie title to watch its trailer directly within the app. Link 1 demonstrates the full app with the login functionality. Link 2 goes straight to the site if you don't want to create an account.  
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://netflix-clone-six-psi-64.vercel.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                    <a 
+                      href="https://netflix-clone-no-sign-rczhn3bd3-nicholas-projects-76aafd4c.vercel.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Nickspero/NetflixClone"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-aos="fade-right" class="project">
               <div class="project__wrapper">
                 <img src="./assets/treact.png" class="project__img" alt="" />
                 <div class="project__wrapper--bg"></div>
@@ -234,7 +304,38 @@
                 </div>
               </div>
             </li>
-            <li class="project">
+            <li data-aos="fade-left" class="project">
+              <div class="project__wrapper">
+                <img src="./assets/omdb.png" class="project__img" alt="" />
+                <div class="project__wrapper--bg"></div>
+                <div class="project__description">
+                  <h3 class="project__description--title">OMDb</h3>
+                  <h4 class="project__description--subtitle">
+                    React, CSS
+                  </h4>
+                  <p class="project__description--para">
+                    Built with React, this sleek movie database updates daily with fresh film information. Easily search thousands of titles and dive into rich details—reviews, ratings, plot summaries, cast lists, and more—all in one place.  
+                  </p>
+                  <div class="project__description--links">
+                    <a
+                      href="https://omdb-flame.vercel.app/"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-solid fa-link"></i>
+                    </a>
+                    <a
+                      href="https://github.com/Nickspero/OMDb-React"
+                      target="_blank"
+                      class="project__description--link"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li data-aos="fade-right" class="project">
               <div class="project__wrapper">
                 <img src="./assets/library.png" class="project__img" alt="" />
                 <div class="project__wrapper--bg"></div>
@@ -268,44 +369,7 @@
                 </div>
               </div>
             </li>
-            <li class="project">
-              <div class="project__wrapper">
-                <img src="./assets/NetflixClone.png" class="project__img" alt="" />
-                <div class="project__wrapper--bg"></div>
-                <div class="project__description">
-                  <h3 class="project__description--title">Netflix Site Clone</h3>
-                  <h4 class="project__description--subtitle">
-                    React
-                  </h4>
-                  <p class="project__description--para">
-                    This Netflix clone is a fully functional web application built with React, featuring a secure login system. It integrates with a live movie API to display up-to-date movies, complete with posters and trailers. Users can click on any movie title to watch its trailer directly within the app. Link 1 demonstrates the full app with the login functionality. Link 2 goes straight to the site if you don't want to create an account.  
-                  </p>
-                  <div class="project__description--links">
-                    <a
-                      href="https://netflix-clone-six-psi-64.vercel.app/"
-                      target="_blank"
-                      class="project__description--link"
-                    >
-                      <i class="fa-solid fa-link"></i>
-                    </a>
-                    <a 
-                      href="https://netflix-clone-no-sign-rczhn3bd3-nicholas-projects-76aafd4c.vercel.app/"
-                      target="_blank"
-                      class="project__description--link"
-                    >
-                      <i class="fa-solid fa-link"></i>
-                    </a>
-                    <a
-                      href="https://github.com/Nickspero/NetflixClone"
-                      target="_blank"
-                      class="project__description--link"
-                    >
-                      <i class="fa-brands fa-github"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </li>
+            
           </ul>
         </div>
       </div>
@@ -344,5 +408,11 @@
         </div>
       </div>
     </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
   </body>
 </html>
