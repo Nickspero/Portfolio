@@ -86,17 +86,11 @@ function resizeCanvas() {
 window.addEventListener("resize", resizeCanvas);
 resizeCanvas();
 
-let mouseX = 0, mouseY = 0;
-window.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX / window.innerWidth;
-  mouseY = e.clientY / window.innerHeight;
-});
-
 // Draw a glowing wave
 function drawRibbon(colors, offset) {
   const time = Date.now() * 0.002;
-  const frequency = .5 + mouseX *2;
-  const amplitude = 150 + mouseY * 100;
+  const frequency = .7;
+  const amplitude = 150 + .5 * 100;
 
   ctx.beginPath();
 
