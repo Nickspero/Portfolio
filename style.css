@@ -633,63 +633,66 @@ label {
 .project__img {
   display: block;
   height: 100%;
-  width: 100%; /* Makes the image stretch to fit the container’s full width */
-  transition: all 300ms ease; /* Smoothly animates any changes (like scale/blur) over 0.3s */
+  width: 100%;
+  /* Makes the image stretch to fit the container’s full width */
+  transition: all 300ms ease;
+  /* Smoothly animates any changes (like scale/blur) over 0.3s */
 }
 
 .project__wrapper {
-  position: relative; /* Needed so child elements (like description/background) can be positioned inside */
-  border-radius: 20px; /* Rounds the corners of the wrapper */
-  box-shadow: 0 20px 80px 0 rgb(0, 0, 0.45); /* Adds a shadow under the box */
-  overflow: hidden; /* Ensures content (like image) doesn’t spill outside the rounded edges */
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0.45);
+  overflow: hidden;
 }
 
 .project__wrapper:hover .project__description {
-  opacity: 1; /* Makes the description fully visible */
-  transform: translateY(-50%); /* Moves it upward into view */
+  opacity: 1;
+  transform: translateY(-50%);
 }
 
 .project__wrapper:hover .project__img {
-  filter: blur(5px); /* Blurs the image slightly */
-  transform: scale(1.07); /* Zooms the image in a bit */
-}
-.project__wrapper:active .project__description {
-  opacity: 1; /* Makes the description fully visible */
-  transform: translateY(-50%); /* Moves it upward into view */
-}
-
-.project__wrapper:active .project__img {
-  filter: blur(5px); /* Blurs the image slightly */
-  transform: scale(1.07); /* Zooms the image in a bit */
-}
-
-.project__description {
-  position: absolute; /* Positions it inside the wrapper */
-  top: 50%; /* Starts vertically centered */
-  left: 10%; /* Pushes it from the left */
-  transform: translateY(100%); /* Initially hidden below the view */
-  color: white; /* White text */
-  opacity: 0; /* Starts invisible */
-  max-width: 550px; /* Limits how wide the text can be */
-  transition: opacity 300ms, transform 450ms ease; /* Smooth animation when showing */
+  filter: blur(5px);
+  transform: scale(1.07);
 }
 
 .project__wrapper:hover .project__wrapper--bg {
-  opacity: 0.7; /* Makes the dark overlay visible */
+  opacity: 0.7;
 }
-.project__wrapper:active .project__wrapper--bg {
-  opacity: 0.7; /* Makes the dark overlay visible */
+.project__wrapper.active .project__description {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+
+.project__wrapper.active .project__img {
+  filter: blur(5px);
+  transform: scale(1.07);
+}
+
+.project__wrapper.active .project__wrapper--bg {
+  opacity: 0.7;
+}
+
+.project__description {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(100%);
+  color: white;
+  opacity: 0;
+  max-width: 550px;
+  transition: opacity 300ms, transform 450ms ease;
 }
 
 .project__wrapper--bg {
-  position: absolute; /* Covers the wrapper completely */
+  position: absolute;
   top: 0;
-  left: 0; /* Starts at top-left corner */
+  left: 0;
   width: 100%;
-  height: 100%; /* Fills the entire wrapper */
-  background-color: #1c1d25; /* Dark overlay color */
-  opacity: 0; /* Starts invisible */
-  transition: all 450ms ease; /* Smooth fade when shown */
+  height: 100%;
+  background-color: #1c1d25;
+  opacity: 0;
+  transition: all 450ms ease;
 }
 
 .project__description--title {
@@ -726,6 +729,12 @@ label {
 .red {
   background-color: #c64623;
   border-top: 1px solid #ede6d7;
+}
+.tap {
+  text-align: center;
+  margin: 24px 0px;
+  display: none;
+  animation: bounce 1000ms infinite alternate-reverse;
 }
 
 /* FOOTER ***********/
@@ -935,6 +944,9 @@ footer {
   .tv__content {
     width: 50%;
   }
+  .section__title {
+    margin-bottom: 36px;
+  }
   .project {
     margin-bottom: 80px;
   }
@@ -957,6 +969,14 @@ footer {
   }
   .project__wrapper:focus .project__wrapper--bg {
     opacity: 0.7; /* Makes the dark overlay visible */
+  }
+  .project__description--link {
+    i{
+      font-size: 20px;
+    }
+  }
+  .tap {
+    display: block;
   }
   .mail__btn--bottom {
     display: none;
